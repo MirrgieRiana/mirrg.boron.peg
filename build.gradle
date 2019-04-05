@@ -30,7 +30,7 @@ repositories {
 dependencies {
     testImplementation 'junit:junit:4.12'
 
-	implementation group: 'mirrg.boron', name: 'mirrg.boron.util', version: '3.7.0'
+	implementation group: 'mirrg.boron', name: 'mirrg.boron.util', version: '3.+'
 	//implementation group: 'mirrg', name: 'mirrg.boron.template', version: '0.0+'
 }
 
