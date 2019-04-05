@@ -1,6 +1,6 @@
 package mirrg.boron.peg.syntaxes;
 
-import static mirrg.boron.peg.UtilsSyntaxOxygen.*;
+import static mirrg.boron.peg.UtilsSyntax.*;
 
 import java.util.ArrayList;
 

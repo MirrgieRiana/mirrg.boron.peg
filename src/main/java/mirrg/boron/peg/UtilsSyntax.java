@@ -21,7 +21,7 @@ import mirrg.boron.peg.syntaxes.SyntaxSlot;
 import mirrg.boron.peg.syntaxes.SyntaxString;
 import mirrg.boron.peg.syntaxes.SyntaxTunnel;
 
-public class UtilsSyntaxOxygen
+public class UtilsSyntax
 {
 
 	/**
