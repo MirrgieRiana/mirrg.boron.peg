@@ -17,7 +17,7 @@ public abstract class Syntax<T>
 
 	public Node<T> parse(String text)
 	{
-		ResultOxygen<T> result = matches(text);
+		ParseResult<T> result = matches(text);
 		if (result.isValid) {
 			return result.node;
 		} else {
@@ -25,22 +25,22 @@ public abstract class Syntax<T>
 		}
 	}
 
-	public ResultOxygen<T> matches(String text)
+	public ParseResult<T> matches(String text)
 	{
 		return matches(text, 0, text.length());
 	}
 
-	public ResultOxygen<T> matches(String text, int begin)
+	public ParseResult<T> matches(String text, int begin)
 	{
 		return matches(text, begin, text.length());
 	}
 
-	public ResultOxygen<T> matches(String text, int begin, int end)
+	public ParseResult<T> matches(String text, int begin, int end)
 	{
 		Memo memo = new Memo();
 		Node<T> node = parse(memo, true, text, begin);
-		if (node == null) return new ResultOxygen<>(null, memo, false);
-		return new ResultOxygen<>(node, memo, node.end == end);
+		if (node == null) return new ParseResult<>(null, memo, false);
+		return new ParseResult<>(node, memo, node.end == end);
 	}
 
 	public void setName(String name)

@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 import org.junit.Test;
 
-import mirrg.boron.peg.core.ResultOxygen;
+import mirrg.boron.peg.core.ParseResult;
 import mirrg.boron.peg.core.Syntax;
 import mirrg.boron.peg.syntaxes.SyntaxOr;
 import mirrg.boron.peg.syntaxes.SyntaxSlot;
@@ -166,7 +166,7 @@ public class Test1
 			.extract(syntaxA)
 			.and(string("B")), "B");
 
-		ResultOxygen<Supplier<String>> result = syntaxB.matches("C");
+		ParseResult<Supplier<String>> result = syntaxB.matches("C");
 		String[] tokens = result.getTokenProposal().stream()
 			.map(s -> s.getName())
 			.filter(n -> n != null)

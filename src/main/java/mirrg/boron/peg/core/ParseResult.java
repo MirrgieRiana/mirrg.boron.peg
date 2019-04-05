@@ -2,14 +2,14 @@ package mirrg.boron.peg.core;
 
 import java.util.ArrayList;
 
-public class ResultOxygen<T>
+public class ParseResult<T>
 {
 
 	public final Node<T> node;
 	public final Memo memo;
 	public final boolean isValid;
 
-	public ResultOxygen(Node<T> node, Memo memo, boolean isValid)
+	public ParseResult(Node<T> node, Memo memo, boolean isValid)
 	{
 		this.node = node;
 		this.memo = memo;
